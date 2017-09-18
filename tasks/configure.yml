@@ -1,0 +1,31 @@
+---
+- name: Set macOS defaults
+  include_role:
+    name: feffi.macos-defaults
+  vars:
+    macos_defaults:
+      defaults:
+        - { domain: "/Library/Preferences/com.apple.loginwindow", key: "AdminHostInfo", type: "string", value: "{{ macos_ui.hostinfo }}", description: "Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window" }
+        - { domain: "/Library/Preferences/com.apple.windowserver", key: "DisplayResolutionEnabled", type: "boolean", value: "{{ macos_ui.hidpi }}", description: "Enable HiDPI display modes (requires restart)" }
+        - { domain: "com.apple.dashboard", key: "devmode", type: "boolean", value: "{{ macos_ui.dashboard_devmode }}", description: "Enable Dashboard dev mode (allows keeping widgets on the desktop)" }
+        - { domain: "com.apple.dashboard", key: "mcx-disabled", type: "boolean", value: "{{ not macos_ui.dashboard_enable }}", description: "Enable Dashboard" }
+        - { domain: "com.apple.helpviewer", key: "DevMode", type: "boolean", value: "{{ macos_ui.help_floating }}", description: "Set Help Viewer windows to non-floating mode" }
+        - { domain: "com.apple.print.PrintingPrefs", key: "Quit When Finished", type: "boolean", value: "{{ macos_ui.quit_printer }}", description: "Quit Printer App After Print Jobs Complete" }
+        - { domain: "com.apple.screencapture", key: "disable-shadow", type: "boolean", value: "{{ not macos_ui.screenshots_shadow }}true", description: "Set shadow in screenshots" }
+        - { domain: "com.apple.screencapture", key: "location", type: "string", value: "{{ macos_ui.screenshots_path }}", description: "Set screenshots save path" }
+        - { domain: "com.apple.screencapture", key: "type", type: "string", value: "{{ macos_ui.screenshots_format }}", description: "Set screenshots save format, options: png, bmp, gif, jpg, pdf, tiff" }
+        - { domain: "com.apple.screensaver", key: "askForPassword", type: "integer", value: "{{ macos_ui.screensaver_password }}", description: "Ask for password on screensaver" }
+        - { domain: "com.apple.screensaver", key: "askForPasswordDelay", type: "integer", value: "{{ macos_ui.screensaver_password_delay }}", description: "Ask for password on screensaver delay in seconds" },
+        - { domain: "com.apple.universalaccess", key: "closeViewZoomFollowsFocus", type: "boolean", value: "{{ macos_ui.zoom_follow }}", description: "Follow the keyboard focus while zoomed in" }
+        - { domain: "com.apple.universalaccess", key: "HIDScrollZoomModifierMask", type: "integer", value: "{{ macos_ui.zoom }}", description: "Use scroll gesture with the Ctrl (^) modifier key to zoom" }
+        - { domain: "NSGlobalDomain", key: "AppleEnableMenuBarTransparency", type: "boolean", value: "{{ macos_ui.menubar_transparency }}", description: "Set Menu bar transparency" }
+        - { domain: "NSGlobalDomain", key: "AppleFontSmoothing", type: "integer", value: "{{ macos_ui.subpixel }}", description: "Enable subpixel font rendering on non-Apple LCDs" }
+        - { domain: "NSGlobalDomain", key: "AppleHighlightColor", type: "string", value: "{{ macos_ui.highlight }}", description: "Set highlight color to green" }
+        - { domain: "NSGlobalDomain", key: "AppleKeyboardUIMode", type: "integer", value: "{{ macos_ui.keyboard_mode }}", description: "Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)" }
+        - { domain: "NSGlobalDomain", key: "AppleMiniaturizeOnDoubleClick", type: "boolean", value: "{{ macos_ui.window_dbclk }}", description: "Double-click a window's title bar to minimize" }
+        - { domain: "NSGlobalDomain", key: "AppleScrollAnimationEnabled", type: "boolean", value: "{{ macos_ui.smooth_scroll }}", description: "Use smooth scrolling" }
+        - { domain: "NSGlobalDomain", key: "AppleShowScrollBars", type: "string", value: "{{ macos_ui.scrollbar_mode }}", description: "Show scrollbars only when scrolling" }
+        - { domain: "NSGlobalDomain", key: "com.apple.swipescrolldirection", type: "boolean", value: "{{ not macos_ui.scroll_natural }}", description: "Natural (Lion-style) scrolling" }
+        - { domain: "NSGlobalDomain", key: "NSAutomaticWindowAnimationsEnabled", type: "boolean", value: "{{ macos_ui.opening_animation }}", description: "Opening and closing windows and popovers" }
+  when:
+    - macos_ui.screenshots_format in [ "png", "bmp", "gif", "jpg", "pdf", "tiff" ]

@@ -1,0 +1,67 @@
+---
+macos_ui:
+  # Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window
+  hostinfo: "HostName"
+
+  # Enable HiDPI display modes (requires restart)
+  hidpi: true
+
+  # Enable Dashboard dev mode (allows keeping widgets on the desktop)
+  dashboard_devmode: true
+
+  # Enable Dashboard
+  dashboard_enable: false
+
+  # Set Help Viewer windows to non-floating mode
+  help_floating: true
+
+  # Quit Printer App After Print Jobs Complete
+  quit_printer: true
+
+  # Set shadow in screenshots
+  screenshots_shadow: false
+
+  # Set screenshots save path
+  screenshots_path: "~/Desktop/Screenshots"
+
+  # Set screenshots save format, options: png, bmp, gif, jpg, pdf, tiff
+  screenshots_format: "png"
+
+  # Ask for password on screensaver
+  screensaver_password: true
+
+  # Ask for password on screensaver delay in seconds
+  screensaver_password_delay: 0
+
+  # Use scroll gesture with the Ctrl (^) modifier key to zoom
+  zoom: "262144"
+
+  # Follow the keyboard focus while zoomed in
+  zoom_follow: true
+
+  # Set Menu bar transparency
+  menubar_transparency: true
+
+  # Enable subpixel font rendering on non-Apple LCDs
+  subpixel: 2
+
+  # Set highlight color to green
+  highlight: "0.764700 0.976500 0.568600"
+
+  # Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
+  keyboard_mode: 3
+
+  # Double-click a window's title bar to minimize
+  window_dbclk: true
+
+  # Use smooth scrolling
+  smooth_scroll: true
+
+  # Show scrollbars only when scrolling
+  scrollbar_mode: "WhenScrolling"
+
+  # Natural (Lion-style) scrolling
+  scroll_natural: true
+
+  # Set opening and closing windows and popovers
+  opening_animation: false

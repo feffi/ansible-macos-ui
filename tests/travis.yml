@@ -1,0 +1,30 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  vars:
+    DEBUG: true
+    macos_ui:
+      hostinfo: "HostName"
+      hidpi: true
+      dashboard_devmode: true
+      dashboard_enable: false
+      help_floating: true
+      quit_printer: true
+      screenshots_shadow: false
+      screenshots_path: "~/Desktop/Screenshots"
+      screenshots_format: "png"
+      screensaver_password: true
+      screensaver_password_delay: 0
+      zoom: "262144"
+      zoom_follow: true
+      menubar_transparency: true
+      subpixel: 2
+      highlight: "0.764700 0.976500 0.568600"
+      keyboard_mode: 3
+      window_dbclk: true
+      smooth_scroll: true
+      scrollbar_mode: "WhenScrolling"
+      scroll_natural: true
+      opening_animation: false
+  roles:
+    - ansible-macos-ui
