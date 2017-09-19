@@ -11,8 +11,19 @@ galaxy_info:
   galaxy_tags:
     - system
     - osx
+    - macos
     - config
     - ui
+    - login
+    - dashboard
+    - helpviewer
+    - print
+    - screensaver
+    - screencapture
+    - menubar
+    - font
+    - animation
+    - scrolling
 dependencies:
   - { role: feffi.macos-defaults,
       macos_defaults: {
