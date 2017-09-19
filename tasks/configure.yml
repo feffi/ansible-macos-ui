@@ -15,7 +15,7 @@
         - { domain: "com.apple.screencapture", key: "location", type: "string", value: "{{ macos_ui.screenshots_path }}", description: "Set screenshots save path" }
         - { domain: "com.apple.screencapture", key: "type", type: "string", value: "{{ macos_ui.screenshots_format }}", description: "Set screenshots save format, options: png, bmp, gif, jpg, pdf, tiff" }
         - { domain: "com.apple.screensaver", key: "askForPassword", type: "integer", value: "{{ macos_ui.screensaver_password }}", description: "Ask for password on screensaver" }
-        - { domain: "com.apple.screensaver", key: "askForPasswordDelay", type: "integer", value: "{{ macos_ui.screensaver_password_delay }}", description: "Ask for password on screensaver delay in seconds" },
+        - { domain: "com.apple.screensaver", key: "askForPasswordDelay", type: "integer", value: "{{ macos_ui.screensaver_password_delay }}", description: "Ask for password on screensaver delay in seconds" }
         - { domain: "com.apple.universalaccess", key: "closeViewZoomFollowsFocus", type: "boolean", value: "{{ macos_ui.zoom_follow }}", description: "Follow the keyboard focus while zoomed in" }
         - { domain: "com.apple.universalaccess", key: "HIDScrollZoomModifierMask", type: "integer", value: "{{ macos_ui.zoom }}", description: "Use scroll gesture with the Ctrl (^) modifier key to zoom" }
         - { domain: "NSGlobalDomain", key: "AppleEnableMenuBarTransparency", type: "boolean", value: "{{ macos_ui.menubar_transparency }}", description: "Set Menu bar transparency" }
