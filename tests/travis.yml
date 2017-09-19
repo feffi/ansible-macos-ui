@@ -27,4 +27,4 @@
       scroll_natural: true
       opening_animation: false
   roles:
-    - ansible-macos-ui
+    - { role: ansible-macos-ui }
