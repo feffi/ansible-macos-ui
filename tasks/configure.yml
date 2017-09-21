@@ -5,8 +5,6 @@
   vars:
     macos_defaults:
       defaults:
-        - { domain: "/Library/Preferences/com.apple.loginwindow", key: "AdminHostInfo", type: "string", value: "{{ macos_ui.hostinfo }}", description: "Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window" }
-        - { domain: "/Library/Preferences/com.apple.windowserver", key: "DisplayResolutionEnabled", type: "boolean", value: "{{ macos_ui.hidpi }}", description: "Enable HiDPI display modes (requires restart)" }
         - { domain: "com.apple.dashboard", key: "devmode", type: "boolean", value: "{{ macos_ui.dashboard_devmode }}", description: "Enable Dashboard dev mode (allows keeping widgets on the desktop)" }
         - { domain: "com.apple.dashboard", key: "mcx-disabled", type: "boolean", value: "{{ not macos_ui.dashboard_enable }}", description: "Enable Dashboard" }
         - { domain: "com.apple.helpviewer", key: "DevMode", type: "boolean", value: "{{ macos_ui.help_floating }}", description: "Set Help Viewer windows to non-floating mode" }

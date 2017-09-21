@@ -23,12 +23,6 @@ All role based variables are listed below, along with default values:
 
 ```yaml
 macos_ui:
-  # Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window
-  hostinfo: "HostName"
-
-  # Enable HiDPI display modes (requires restart)
-  hidpi: true
-
   # Enable Dashboard dev mode (allows keeping widgets on the desktop)
   dashboard_devmode: true
 

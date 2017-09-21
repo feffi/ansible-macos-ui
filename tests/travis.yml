@@ -4,8 +4,6 @@
   vars:
     DEBUG: true
     macos_ui:
-      hostinfo: "HostName"
-      hidpi: true
       dashboard_devmode: true
       dashboard_enable: false
       help_floating: true
