@@ -13,8 +13,8 @@
       screenshots_shadow: false
       screenshots_path: "~/Desktop/Screenshots"
       screenshots_format: "png"
-      screensaver_password: true
-      screensaver_password_delay: 0
+      screensaver_password: 1
+      screensaver_password_delay: 0.0
       zoom: "262144"
       zoom_follow: true
       menubar_transparency: true
