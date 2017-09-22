@@ -22,7 +22,7 @@ macos_ui:
   screenshots_format: "png"
 
   # Ask for password on screensaver
-  screensaver_password: 1
+  screensaver_password: true
 
   # Ask for password on screensaver delay in seconds
   screensaver_password_delay: 0.0
@@ -37,13 +37,13 @@ macos_ui:
   menubar_transparency: true
 
   # Enable subpixel font rendering on non-Apple LCDs
-  subpixel: 2
+  subpixel: true
 
   # Set highlight color to green
   highlight: "0.764700 0.976500 0.568600"
 
   # Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
-  keyboard_mode: 3
+  keyboard_mode: true
 
   # Double-click a window's title bar to minimize
   window_dbclk: true
