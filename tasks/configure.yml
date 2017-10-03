@@ -5,6 +5,7 @@
   vars:
     macos_defaults:
       defaults:
+        - { domain: "com.apple.dashboard", key: "enabled-state", type: "integer", value: "{{ macos_ui.dashboard_state }}", description: "Dashboard state, 1 = disabled, 2 = show as space, 3 = run as overlay" }
         - { domain: "com.apple.dashboard", key: "devmode", type: "boolean", value: "{{ macos_ui.dashboard_devmode }}", description: "Enable Dashboard dev mode (allows keeping widgets on the desktop)" }
         - { domain: "com.apple.dashboard", key: "mcx-disabled", type: "boolean", value: "{{ not macos_ui.dashboard_enable }}", description: "Enable Dashboard" }
         - { domain: "com.apple.helpviewer", key: "DevMode", type: "boolean", value: "{{ macos_ui.help_floating }}", description: "Set Help Viewer windows to non-floating mode" }

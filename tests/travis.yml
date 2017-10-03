@@ -4,6 +4,7 @@
   vars:
     DEBUG: true
     macos_ui:
+      dashboard_state: 1
       dashboard_devmode: true
       dashboard_enable: false
       help_floating: true

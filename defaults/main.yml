@@ -1,5 +1,8 @@
 ---
 macos_ui:
+  # Dashboard state, 1 = disabled, 2 = show as space, 3 = run as overlay
+  dashboard_state: 1
+
   # Enable Dashboard dev mode (allows keeping widgets on the desktop)
   dashboard_devmode: true
 

@@ -23,6 +23,9 @@ All role based variables are listed below, along with default values:
 
 ```yaml
 macos_ui:
+  # Dashboard state, 1 = disabled, 2 = show as space, 3 = run as overlay
+  dashboard_state: 1
+
   # Enable Dashboard dev mode (allows keeping widgets on the desktop)
   dashboard_devmode: true
 
@@ -93,6 +96,7 @@ None.
     - hosts: all
       vars:
       macos_ui:
+        dashboard_state: 1
         hostinfo: "HostName"
         hidpi: true
         dashboard_devmode: true
@@ -125,6 +129,7 @@ Or with local parameters:
       roles:
         - { role: feffi.macos-ui,
             macos_ui: {
+              dashboard_state: 1,
               hostinfo: "HostName",
               hidpi: true,
               dashboard_devmode: true,
